@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../', import.meta.url));
-const read = name => readFileSync(`${root}assets/${name}.svg`, 'utf8');
+const read = name => readFileSync(`${root}assets/${name}.svg`, 'utf8').replace(/\r\n/g, '\n');
 // Preserve canonical outlines. Only presentation attributes change for inherited ink.
 const clean = svg => svg.replace(/<!--[\s\S]*?-->/g, '').replace(/<svg\b[^>]*>/, tag => tag.replace(/\s+(role|aria-label|aria-labelledby|width|height)="[^"]*"/g, '')).replace(/<title[\s\S]*?<\/title>/g, '').replace(/\s{2,}/g, ' ').trim();
 const mtw = clean(read('mtw')).replaceAll('#fff', 'currentColor');

@@ -1,6 +1,6 @@
 {
   "name": "@cristonj/project-footer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Criston Jackson's shared creator credit and project links",
   "type": "module",
   "exports": {
