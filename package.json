@@ -1,0 +1,36 @@
+{
+  "name": "@cristonj/project-footer",
+  "version": "0.2.0",
+  "description": "Criston Jackson's shared creator credit and project links",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./styles.css": "./styles.css"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "styles.css",
+    "assets.js",
+    "assets",
+    "README.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "node scripts/build-assets.mjs",
+    "test": "node --test test.mjs",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}

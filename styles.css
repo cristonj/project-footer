@@ -1,0 +1,21 @@
+/* All selectors are scoped. No global resets, fonts, theme scripts, or network requests. */
+.cj-projects { display:flex; flex-direction:column; align-items:center; gap:var(--cj-row-gap,16px); width:100%; min-width:0; padding:var(--cj-padding,24px 0); color:var(--cj-color,inherit); font-family:inherit; text-align:center; }
+.cj-projects .cj-projects__credit { margin:0; font-size:var(--cj-credit-size,13px); line-height:1.5; color:var(--cj-muted,currentColor); }
+.cj-projects .cj-projects__credit a { display:inline-flex; align-items:center; min-height:44px; color:var(--cj-color,inherit); }
+.cj-projects .cj-projects__brands { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:var(--cj-brand-gap,12px 32px); width:100%; min-width:0; }
+.cj-projects .cj-projects__current { display:flex; align-items:center; justify-content:center; width:100%; min-width:0; }
+.cj-projects .cj-projects__project { display:flex; align-items:center; justify-content:center; min-height:44px; max-width:100%; padding:4px 0; color:inherit; text-decoration:none; }
+.cj-projects .cj-projects__logo { display:block; width:var(--cj-logo-width,128px); max-width:100%; line-height:0; }
+.cj-projects .cj-projects__asset { display:block; width:100%; }
+.cj-projects .cj-projects__asset--chatrpe { display:var(--cj-chatrpe-plain,block); }
+.cj-projects .cj-projects__asset--chatrpeOutlined { display:var(--cj-chatrpe-outlined,none); }
+.cj-projects .cj-projects__logo svg,.cj-projects .cj-projects__logo img { display:block; width:100%; height:auto; max-width:100%; overflow:visible; }
+.cj-projects .cj-projects__project--vibe { --cj-logo-width:var(--cj-vibe-width,76px); }
+.cj-projects .cj-projects__project--mtw { --cj-logo-width:var(--cj-mtw-width,202px); }
+.cj-projects .cj-projects__project--chatrpe { --cj-logo-width:var(--cj-chatrpe-width,128px); }
+.cj-projects .cj-projects__project--lacuna { --cj-logo-width:var(--cj-lacuna-width,104px); }
+.cj-projects .cj-projects__content { width:100%; min-width:0; }
+.cj-projects a { text-underline-offset:4px; }
+.cj-projects a:hover { text-decoration:underline; }
+.cj-projects a:focus-visible { outline:2px solid var(--cj-focus,currentColor); outline-offset:5px; border-radius:3px; }
+@media (forced-colors:active) { .cj-projects svg { forced-color-adjust:auto; } }
